@@ -1,5 +1,5 @@
 import streamlit as st
-import tensorflow
+import tensorflow as tf
 from PIL import Image
 import numpy as np
 import sys 
@@ -15,7 +15,7 @@ if 'tensorflow' not in sys.modules:
     st.warning("TensorFlow is not available in this environment. Please ensure that you have the correct environment activated.")
 else:
     # Load the TensorFlow model from the .h5 file
-    model = tensorflow.keras.models.load_model("model.h5")
+    model = tf.keras.models.load_model("model.h5")
 
     # Threshold for tumor detection
     threshold = 0.1
