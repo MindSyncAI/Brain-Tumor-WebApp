@@ -1,0 +1,7 @@
+streamlit
+flask
+tensorflow
+numpy
+pandas
+matplotlib
+keras==2.6.0
