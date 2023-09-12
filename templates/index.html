@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Tumor Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <center><h1>Brain Tumor Detection</h1></center>
+        <form method="post" enctype="multipart/form-data" action="{{ url_for('index') }}">
+            <input type="file" name="file">
+            <input type="submit" value="Predict">
+        </form>
+        {% if result %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
